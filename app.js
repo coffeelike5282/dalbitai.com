@@ -16,10 +16,10 @@ const SERVICE_DETAILS = {
         <li>본문 게재 직후 쿠팡 파트너스/자사몰 링크 대댓글 자동 부착 파이프라인</li>
         <li>600명 팔로워 계정에서 직접 검증된 실전 전환율 보장</li>
       </ul>
-      <p style="color: #94A3B8; font-size: 0.875rem;">상태: 현재 1차 비공개 베타 테스터 모집 중 (이용 신청 시 우선 권한 부여)</p>
+      <p style="color: #94A3B8; font-size: 0.875rem;">상태: 현재 Meta API 연동 및 정식 런칭 준비 중 (오픈 준비 중)</p>
     `,
-    actionText: '베타 이용 신청',
-    actionValue: '스레드 AI 자동화 SaaS (PostEverywhere AI)'
+    actionText: '🔒 오픈 준비 중',
+    actionDisabled: true
   },
   tarot: {
     title: 'AI 타로 인터랙티브 웹 (Tarot AI)',
@@ -150,14 +150,26 @@ function openDetailModal(key) {
   const actionBtn = document.getElementById('detailModalActionBtn');
   actionBtn.innerText = item.actionText;
   
-  actionBtn.onclick = () => {
-    closeDetailModal();
-    if (item.actionUrl) {
-      window.open(item.actionUrl, '_blank');
-    } else {
-      openApplyModal(item.actionValue || item.title);
-    }
-  };
+  if (item.actionDisabled) {
+    actionBtn.disabled = true;
+    actionBtn.style.opacity = '0.55';
+    actionBtn.style.cursor = 'not-allowed';
+    actionBtn.style.pointerEvents = 'none';
+    actionBtn.onclick = null;
+  } else {
+    actionBtn.disabled = false;
+    actionBtn.style.opacity = '';
+    actionBtn.style.cursor = '';
+    actionBtn.style.pointerEvents = '';
+    actionBtn.onclick = () => {
+      closeDetailModal();
+      if (item.actionUrl) {
+        window.open(item.actionUrl, '_blank');
+      } else {
+        openApplyModal(item.actionValue || item.title);
+      }
+    };
+  }
 
   modal.classList.add('active');
   document.body.style.overflow = 'hidden';
