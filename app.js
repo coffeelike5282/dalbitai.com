@@ -226,6 +226,14 @@ function showToast(msg) {
   }, 4000);
 }
 
+// Prevent selection on drag / context menu for non-inputs
+document.addEventListener('selectstart', (e) => {
+  const tag = e.target.tagName ? e.target.tagName.toLowerCase() : '';
+  if (tag !== 'input' && tag !== 'textarea' && !e.target.isContentEditable) {
+    e.preventDefault();
+  }
+});
+
 // Expose globals for inline attributes
 window.openApplyModal = openApplyModal;
 window.closeApplyModal = closeApplyModal;

@@ -50,11 +50,45 @@
   --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Base Reset */
+/* Base Reset & Text Selection Prevention */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+/* Allow text selection inside form inputs & textareas */
+input, textarea, select, [contenteditable="true"] {
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  user-select: text !important;
+  -webkit-touch-callout: default !important;
+}
+
+/* Suppress highlight selection for non-input elements */
+::selection {
+  background: transparent;
+  color: inherit;
+}
+::-moz-selection {
+  background: transparent;
+  color: inherit;
+}
+
+input::selection, textarea::selection {
+  background: rgba(244, 211, 94, 0.4);
+  color: #FFFFFF;
+}
+
+img, svg {
+  -webkit-user-drag: none;
+  user-drag: none;
 }
 
 html {
@@ -62,6 +96,8 @@ html {
   font-size: 16px;
   background-color: var(--canvas-bg);
   color: var(--text-primary);
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 body {
@@ -73,6 +109,8 @@ body {
   position: relative;
   -webkit-font-smoothing: antialiased;
   word-break: keep-all;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 /* Celestial Ambient Glow Background */
@@ -1259,14 +1297,64 @@ body {
 }
 
 @media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .site-header {
+    height: 66px;
+  }
+
+  .nav-wrapper {
+    height: 66px;
+    gap: 12px;
+  }
+
+  .brand-logo {
+    gap: 10px;
+    min-width: 0;
+    flex-shrink: 1;
+  }
+
+  .brand-icon-svg {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+  }
+
+  .brand-text-group {
+    min-width: 0;
+  }
+
+  .brand-title {
+    font-size: 1.125rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .brand-subtitle {
+    font-size: 0.625rem;
+  }
+
   .nav-menu {
     display: none;
   }
   
   .mobile-toggle {
-    display: flex;
+    display: none;
   }
-  
+
+  .nav-actions {
+    flex-shrink: 0;
+  }
+
+  .nav-actions .btn-sm {
+    padding: 8px 14px;
+    font-size: 0.8125rem;
+    gap: 4px;
+  }
+
   .portfolio-grid,
   .pivot-grid,
   .commerce-grid,
@@ -1290,5 +1378,85 @@ body {
   .footer-bottom {
     flex-direction: column;
     text-align: center;
+  }
+}
+
+/* Smartphone Small Screen (width <= 560px): 버튼과 Moonlight 겹침 및 간섭 완벽 방지 */
+@media (max-width: 560px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .site-header {
+    height: 60px;
+  }
+
+  .nav-wrapper {
+    height: 60px;
+    gap: 8px;
+  }
+
+  .brand-logo {
+    gap: 8px;
+  }
+
+  .brand-icon-svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .brand-title {
+    font-size: 1rem;
+    gap: 0;
+  }
+
+  /* 문라이트(Moonlight) 텍스트를 모바일에서 숨겨 체험신청 버튼과의 간섭 100% 원천 차단 */
+  .brand-title .brand-en,
+  .brand-title span {
+    display: none !important;
+  }
+
+  .brand-subtitle {
+    font-size: 0.5625rem;
+    letter-spacing: 0.04em;
+  }
+
+  .nav-actions .btn-sm {
+    padding: 6px 12px;
+    font-size: 0.78125rem;
+  }
+
+  .nav-actions .btn-sm svg {
+    display: none; /* 모바일에서 화살표 아이콘을 숨겨 버튼 폭 최적화 */
+  }
+
+  .hero-section {
+    padding: 100px 0 50px;
+  }
+
+  .hero-headline {
+    font-size: 1.875rem;
+  }
+
+  .hero-subheadline {
+    font-size: 0.9375rem;
+  }
+
+  .hero-pill-badge {
+    font-size: 0.75rem;
+    padding: 6px 14px;
+  }
+
+  .hero-cta-group .btn {
+    width: 100%;
+  }
+
+  .manifesto-box {
+    padding: 20px 16px;
+  }
+
+  .manifesto-text {
+    font-size: 0.9375rem;
+    line-height: 1.7;
   }
 }
