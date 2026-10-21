@@ -68,8 +68,9 @@
 
         <div class="nav-actions">
           <button class="btn btn-primary btn-sm" id="navCtaBtn"
-            onclick="openApplyModal('스레드 AI 자동화 SaaS (PostEverywhere AI)')">
-            <span>체험 신청</span>
+            onclick="showToast('체험 신청 기능은 현재 준비 중입니다.')"
+            title="현재 준비 중인 기능입니다.">
+            <span>체험 신청 (준비 중)</span>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
@@ -568,18 +569,18 @@
             자영업자와 N잡러의 경제적·시간적 자유를 위한 100% 현장 검증 마이크로 SaaS를 만듭니다.
           </p>
           <div class="footer-social-links">
-            <a href="https://threads.net" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
-              title="Threads">🧵</a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
-              title="YouTube">📺</a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn"
-              title="Instagram">📸</a>
-            <a href="mailto:contact@dalbitai.com" class="social-icon-btn" title="Email">✉️</a>
+            <a href="javascript:void(0)" onclick="showToast('스레드 채널은 현재 준비 중입니다.')" class="social-icon-btn"
+              title="Threads (준비 중)">🧵</a>
+            <a href="javascript:void(0)" onclick="showToast('유튜브 채널은 현재 준비 중입니다.')" class="social-icon-btn"
+              title="YouTube (준비 중)">📺</a>
+            <a href="javascript:void(0)" onclick="showToast('인스타그램 채널은 현재 준비 중입니다.')" class="social-icon-btn"
+              title="Instagram (준비 중)">📸</a>
+            <a href="mailto:hatnim72@gmail.com" class="social-icon-btn" title="Email (hatnim72@gmail.com)">✉️</a>
           </div>
         </div>
 
         <div>
-          <h4 class="footer-col-title">6대 서비스 포털</h4>
+          <h4 class="footer-col-title">5대 서비스 포털</h4>
           <ul class="footer-links">
             <li><a href="https://tarot.coffeelike5282.com/" target="_blank">AI 타로 (Tarot AI)</a></li>
             <li><a href="https://grind.coffeelike5282.com/" target="_blank">원두 분쇄도 (Grind Curation)</a></li>
@@ -594,11 +595,13 @@
           <div class="footer-contact-info">
             <p>상호명: 달빛 연구소 (Moonlight Lab)</p>
             <p>대표 도메인: dalbitai.com</p>
-            <p>공식 문의: contact@dalbitai.com</p>
+            <p>공식 문의: <a href="mailto:hatnim72@gmail.com" style="color: inherit; text-decoration: underline;">hatnim72@gmail.com</a></p>
             <p>전문 분야: 마이크로 SaaS • AI 파이프라인 • B2B 컨설팅</p>
             <div style="margin-top: 16px;">
-              <button class="btn btn-primary btn-sm" onclick="openApplyModal('B2B 제안 및 통합 문의')">
-                B2B 제안 및 문의하기
+              <button class="btn btn-primary btn-sm"
+                onclick="showToast('B2B 제안 및 문의 접수는 현재 준비 중입니다. 문의사항은 hatnim72@gmail.com으로 연락 부탁드립니다.')"
+                title="현재 준비 중인 기능입니다.">
+                B2B 제안 및 문의하기 (준비 중)
               </button>
             </div>
           </div>
