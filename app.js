@@ -32,10 +32,10 @@ const SERVICE_DETAILS = {
         <li>사용자 성향에 맞춘 <strong>4단 탐지 민감도 조절 슬라이더(×0.5 초기선점 ~ ×5.0 상위 1% 찐떡상)</strong> 제공</li>
         <li>외부 서버 전송 없는 100% 브라우저 로컬 연산으로 계정 안전성 및 제로코스트(무료) 보장</li>
       </ul>
-      <p style="color: #94A3B8; font-size: 0.875rem;">설치 및 안내: https://radar.dalbitai.com/ (크롬 웹스토어 정식 등록)</p>
+      <p style="color: #94A3B8; font-size: 0.875rem;">크롬 웹스토어 주소: https://bit.ly/4iEQ6kO</p>
     `,
-    actionText: '설치 및 대시보드 이동 ↗',
-    actionUrl: 'https://radar.dalbitai.com/'
+    actionText: '크롬 웹스토어 바로가기 ↗',
+    actionUrl: 'https://bit.ly/4iEQ6kO'
   },
   threads: {
     title: '스레드 AI 자동화 SaaS (PostEverywhere AI)',
@@ -145,7 +145,7 @@ function openApplyModal(serviceName) {
   const modal = document.getElementById('applyModal');
   const select = document.getElementById('appliedService');
   const title = document.getElementById('modalServiceTitle');
-  
+
   if (serviceName) {
     title.innerText = `[${serviceName}] 신청 및 문의`;
     if (select) {
@@ -159,7 +159,7 @@ function openApplyModal(serviceName) {
   } else {
     title.innerText = '솔루션 이용 및 제휴 신청';
   }
-  
+
   modal.classList.add('active');
   document.body.style.overflow = 'hidden';
 }
@@ -181,7 +181,7 @@ function openDetailModal(key) {
 
   const actionBtn = document.getElementById('detailModalActionBtn');
   actionBtn.innerText = item.actionText;
-  
+
   if (item.actionDisabled) {
     actionBtn.disabled = true;
     actionBtn.style.opacity = '0.55';
