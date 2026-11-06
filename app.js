@@ -3,8 +3,40 @@
  * Core Interactive Scripts
  */
 
-// Detail Data Dictionary for 6 SaaS Solutions
+// Detail Data Dictionary for SaaS Solutions
 const SERVICE_DETAILS = {
+  radar: {
+    title: '스레드 바이럴 레이더 (Threads Viral Radar SaaS)',
+    sub: '24시간 무인 급상승 스레드 포착 & 첫 댓글 선점 골든타임 대시보드',
+    body: `
+      <p style="margin-bottom: 12px;"><strong>[주요 기능 & 핵심 가치]</strong></p>
+      <ul style="padding-left: 20px; margin-bottom: 16px;">
+        <li>인기 급상승 피드 + 실시간 최신 피드를 동시에 쓸어담는 <strong>듀얼 스윕(Dual-Sweep) 화력 탐지 엔진</strong></li>
+        <li>아직 댓글이 적고 좋아요 가속도가 붙기 시작한 <strong>'⚡ 첫 댓글 선점 블루오션'</strong> 게시물 정밀 발굴</li>
+        <li>S급 마스터 키워드 자동 순환 및 개인 맞춤 키워드 <strong>텔레그램 실시간 속보 알림</strong></li>
+        <li>AI 3색 맞춤 댓글 생성기 및 실측 데이터 기반 <strong>인사이트 원고·카드뉴스 이미지 스튜디오</strong> 내장</li>
+      </ul>
+      <p style="color: #94A3B8; font-size: 0.875rem;">운영 주소: https://radar.dalbitai.com/</p>
+    `,
+    actionText: '스레드 레이더 열기 ↗',
+    actionUrl: 'https://radar.dalbitai.com/'
+  },
+  radar_lite: {
+    title: '스레드 레이더 라이트 (Threads Velocity Radar)',
+    sub: '크롬 웹스토어 공식 출시 · 스레드 피드 실시간 급상승 하이라이트 확장 프로그램',
+    body: `
+      <p style="margin-bottom: 12px;"><strong>[주요 기능 & 핵심 가치]</strong></p>
+      <ul style="padding-left: 20px; margin-bottom: 16px;">
+        <li>스레드(threads.com) 피드를 스크롤하는 즉시 0.1초 만에 게시물별 <strong>실시간 화력 가속도(Velocity)</strong> 연산</li>
+        <li><strong>⚡선점 찬스 · 🔥급상승 중 · 👑떡상 폭발</strong> 3단계 상태 뱃지 및 골드·에메랄드 카드 테두리 하이라이트</li>
+        <li>사용자 성향에 맞춘 <strong>4단 탐지 민감도 조절 슬라이더(×0.5 초기선점 ~ ×5.0 상위 1% 찐떡상)</strong> 제공</li>
+        <li>외부 서버 전송 없는 100% 브라우저 로컬 연산으로 계정 안전성 및 제로코스트(무료) 보장</li>
+      </ul>
+      <p style="color: #94A3B8; font-size: 0.875rem;">설치 및 안내: https://radar.dalbitai.com/ (크롬 웹스토어 정식 등록)</p>
+    `,
+    actionText: '설치 및 대시보드 이동 ↗',
+    actionUrl: 'https://radar.dalbitai.com/'
+  },
   threads: {
     title: '스레드 AI 자동화 SaaS (PostEverywhere AI)',
     sub: 'Meta 공식 Graph API 기반 마케팅 무한 루프 솔루션',
