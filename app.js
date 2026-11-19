@@ -127,6 +127,22 @@ const SERVICE_DETAILS = {
     `,
     actionText: '웹사이트 방문하기',
     actionUrl: 'https://calldrive.coffeelike5282.com/'
+  },
+  logi_radar: {
+    title: '로지 레이더 (Logi Collector × LogiRadar Web)',
+    sub: '현장 콜 데이터 자동 수집 앱 + 대리운전 빅데이터 분석 웹 대시보드 통합 플랫폼',
+    body: `
+      <p style="margin-bottom: 12px;"><strong>[주요 기능 & 핵심 가치]</strong></p>
+      <ul style="padding-left: 20px; margin-bottom: 16px;">
+        <li><strong>현장 자동 수집 엔진 (Logi Collector · Android)</strong>: 야간 배차 현장의 출발지·도착지·요금·거리 데이터를 자동 정제·중복 제거하여 클라우드로 실시간 적재</li>
+        <li><strong>수요 히트맵 & 황금 대기 스팟 (Heatmap & Spot Explorer)</strong>: 요일·시간대별 콜 밀집 구역과 실제 콜이 잘 뜨는 대기 거점을 지도 기반으로 시각화</li>
+        <li><strong>요금 급등 & 단가 분석 (Pricing Surge)</strong>: 시간·구간별 호출 요금 변동 및 고단가 피크 타임 패턴 정밀 추적</li>
+        <li><strong>외곽 탈출 & 복귀 동선 가이드 (OD Escape & Command Center)</strong>: 외곽 지역 하차 시 빈 차 대기 시간을 줄이는 최적 탈출·연계 동선 인사이트 제공</li>
+      </ul>
+      <p style="color: #94A3B8; font-size: 0.875rem;">상태: 현재 안드로이드 수집 앱 및 웹 분석 대시보드 통합 개발 중 (서비스 URL 비공개 · 오픈 준비 중)</p>
+    `,
+    actionText: '🔒 오픈 준비 중',
+    actionDisabled: true
   }
 };
 
