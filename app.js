@@ -143,6 +143,22 @@ const SERVICE_DETAILS = {
     `,
     actionText: '🔒 오픈 준비 중',
     actionDisabled: true
+  },
+  agent_team: {
+    title: '달빛 AI 에이전트 팀 (DBAgentTEAM v2.1)',
+    sub: '추가 API 과금 $0로 굴리는 5인 전문 AI 개발팀 & 원격 관제 시스템',
+    body: `
+      <p style="margin-bottom: 12px;"><strong>[주요 기능 & 핵심 아키텍처]</strong></p>
+      <ul style="padding-left: 20px; margin-bottom: 16px;">
+        <li><strong>5인 전문 AI 페르소나 협업</strong>: 프로덕트 기획자 · AI UI/UX 디자이너 · 시니어 진단 분석관 · 수석 풀스택 개발자 · 품질/보안/FinOps 검수관이 역할 분담으로 협업</li>
+        <li><strong>종량제 API 과금 $0 설계</strong>: Antigravity CLI 구독 쿼터 전용 브릿지 및 유료 크레딧 자동 차단 로직으로 비용 폭탄 원천 봉쇄</li>
+        <li><strong>FinOps 4대 필수 검수 게이트</strong>: API 비용 · DB 부하 · 저사양 서버 RAM/좀비 프로세스 · 레이트 리밋을 패치 전 자동 사전 심의</li>
+        <li><strong>2단계 HITL(인간 승인) & 원격 관제</strong>: 1단계 읽기 전용 심의(plan) 후 관리자 승인 시에만 격리 Git 브랜치로 2단계 패치(auto) 실행, Chainlit + Cloudflare Zero Trust(Google OAuth)로 외부에서도 안전하게 지휘</li>
+      </ul>
+      <p style="color: #94A3B8; font-size: 0.875rem;">상태: 달빛 연구소 전체 서비스 개발·운영 파이프라인에 실전 투입 중 (관리자 전용 비공개 관제실)</p>
+    `,
+    actionText: '🔒 관리자 전용 관제',
+    actionDisabled: true
   }
 };
 
