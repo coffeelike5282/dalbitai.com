@@ -1227,8 +1227,8 @@ body {
 
 .footer-top {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
-  gap: 60px;
+  grid-template-columns: 1.25fr 1fr 1.25fr;
+  gap: 48px;
   margin-bottom: 60px;
 }
 
@@ -1294,10 +1294,54 @@ body {
 }
 
 .footer-contact-info {
-  font-family: var(--font-mono);
-  font-size: 0.8125rem;
+  font-family: var(--font-body);
+  font-size: 0.84rem;
   color: var(--text-muted);
-  line-height: 1.8;
+  line-height: 1.65;
+}
+
+.footer-biz-grid {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr);
+  row-gap: 8px;
+  column-gap: 12px;
+  margin: 0;
+}
+
+.footer-biz-grid dt {
+  color: var(--text-secondary);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.footer-biz-grid dd {
+  margin: 0;
+  color: var(--text-muted);
+  word-break: keep-all;
+}
+
+.footer-biz-grid dd a {
+  color: var(--text-secondary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.15s ease;
+}
+
+.footer-biz-grid dd a:hover {
+  color: #f5b935;
+}
+
+.footer-biz-sub {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.footer-nowrap {
+  white-space: nowrap;
+}
+
+.footer-policy-link {
+  font-weight: 600;
 }
 
 .footer-bottom {
